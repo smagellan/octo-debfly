@@ -1,6 +1,6 @@
 TODO: 
 
-1) add user initialization
+1) ~~add user initialization~~
 
 2) change logs location
 
