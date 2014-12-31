@@ -1,0 +1,24 @@
+diff -Nuar /tmp/1/series debian/patches/series
++++ debian/patches/series	2014-12-30 23:11:06.570333792 +0300
+@@ -0,0 +1 @@
++wildfly-systemd-service.patch
+diff -Nuar /tmp/1/wildfly-systemd-service.patch debian/patches/wildfly-systemd-service.patch
++++ debian/patches/wildfly-systemd-service.patch	2014-12-30 23:12:52.118115038 +0300
+@@ -0,0 +1,17 @@
++extra file to make systemd happy
++--- /dev/null
+++++ b/wildfly.service
++@@ -0,0 +1,13 @@
+++[Unit]
+++Description=WildFly application server
+++After=network.target
+++ 
+++[Service]
+++Type=simple
+++User=wildfly
+++Group=wildfly
+++ExecStart=/opt/wildfly/bin/standalone.sh
+++ 
+++[Install]
+++WantedBy=multi-user.target
+++
